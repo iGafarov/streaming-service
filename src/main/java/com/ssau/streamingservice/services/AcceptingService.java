@@ -16,7 +16,6 @@ import java.util.Objects;
 public abstract class AcceptingService {
 
     private static final String FILE_PATH = "tmp\\";
-    private static final int FRAMES_COUNT = 200;
 
     public static void startAccept(int port) throws IOException, InterruptedException {
 
@@ -34,7 +33,7 @@ public abstract class AcceptingService {
         JPanel imagePanel = new JPanel();
         rootPanel.add(imagePanel);
 
-        try (DataInputStream rcv = new DataInputStream(new BufferedInputStream(socket.getInputStream()))) //never use DataStreams without buffering, too slow
+        try (DataInputStream rcv = new DataInputStream(new BufferedInputStream(socket.getInputStream())))
         {
             int iteration = 0;
             for (int currentFrameNum = 0; currentFrameNum >= 0; ++currentFrameNum) {

@@ -11,8 +11,6 @@ import java.net.ServerSocket;
 
 public abstract class StreamingService {
 
-    private static final int FRAMES_COUNT = 200;
-
     public static void startWebcamStreaming(int port) throws IOException {
 
         Webcam webcam = Webcam.getDefault();

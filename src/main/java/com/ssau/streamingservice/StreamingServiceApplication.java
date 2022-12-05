@@ -1,7 +1,6 @@
 package com.ssau.streamingservice;
 
 import com.ssau.streamingservice.services.StreamingService;
-
 import java.io.IOException;
 
 public class StreamingServiceApplication {
